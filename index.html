@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="vie  wport" content="width=device-width, initial-scale=1.0">
+    <title>landing page</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="stylesheet" href="all.css">
+
+
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="#"><img src="octonet.svg" alt="logo" width="120" height="50"></a>
+            <nav>
+                <ul>
+                    <li><a href="">home</a></li>
+                    <li><a href="#">courses</a>
+                        <ul class="submenu">
+                            <li><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">JAVA SCRIPT</a></li>
+                        
+                        </ul>
+                    </li>
+                    <li><a href="">services</a></li>
+                    <li><a href="">About US</a></li>
+                    <li><a href="" class="btn">Sign UP</a></li>
+                </ul>
+                <!-- <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const coursesLink = document.querySelector('nav ul li:nth-child(2) > a');
+                        const submenu = document.querySelector('.submenu');
+                
+                        coursesLink.addEventListener('click', function(e) {
+                            e.preventDefault(); // Prevent default link behavior
+                            submenu.style.opacity = submenu.style.opacity === '1' ? '0' : '1';
+                            submenu.style.marginTop = submenu.style.opacity === '1' ? '20px' : '15px';
+                        });
+                    });
+                </script> -->
+                
+            </nav>
+            <div>
+                <i class="fa fa-bars"></i>
+            </div>
+        </header>
+
+        <section id="home">
+            <div class="slide-wrapper">
+                <div class="slider pic-1">
+                    <p>naruto </p>
+                </div>
+                <div class="slider pic-2">
+                    <p>Attack ON Titan</p>
+                </div>
+                <div class="slider pic-3">
+                    <p>One Piece</p>
+                </div>
+                <div class="slider pic-4">
+                    <p>OPM</p>
+                </div>
+                <div class="slider pic-5">
+                    <p>Demon Slayer</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/script.js"></script>
+    <!-- jQuery CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- jQuery Local -->
+<script src="script.js"></script>
+
+
+    
+</body>
+</htm>

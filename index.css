@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper{
+    position: relative;
+    height: 100vh;
+}
+header{
+    width: 70%;
+    border: 1px solid brown;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+header ul li{
+    margin:0.4rem;
+
+
+}
+header ul li a{
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding: 10px 20px;
+
+}
+header ul li a:hover{
+    color:#fff;
+    background-color: #25509e;
+    border-radius: 20px;
+    transition: all ease .3s;
+}
+header ul li a.btn{
+    color:#fff;
+    background-color: #25509e;
+    padding: 15px 50px;
+    border-radius: 20px;
+
+
+}
+
+header ul li a.btn:hover{
+    color:#25509e;
+    background-color: lightblue;
+
+}
+
+
+
+
+header ul li {
+    position: relative; /* Set position relative to allow absolute positioning of submenu */
+}
+
+
+/* Submenu start */
+
+
+ .submenu{
+    max-width: 200px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: -2px 2px 3px gray;
+    /* first mention the horizontal line and positive indicate right side shadows and negitive indicate left side shadows
+    the second value is vertical line  and positive indicate bottom and negitive indicate above 
+    the third value is to make blur effect from the shadows 
+    the forth value is for the color: */
+    padding-left: 0;
+    margin-top: 15px;
+    opacity: 0;
+    transition: all ease .5s;
+    z-index: 1;
+    /* thsssssis property controls the vertical staking order of elements that overlaps,and its only affects the elements that have a position value than static,neg val in z-index to lowering the priority and vise versa,it should be with absolute position */
+   display: block;
+ } 
+
+ ul li:hover .submenu{
+    opacity: 1;
+    margin: 20px 0;
+    border-radius: 20;
+
+ }
+ .submenu li{
+    margin: 0px;
+   /*  border: 1px solid red; */
+
+ }
+ .submenu li a{
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 20px;
+ }
+ .submenu li:first-child a{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+ }
+
+ .submenu li:last-child a{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+ }
+    /* submenu ends */
+
+    /* slider starts */
+    #home{
+        height: 650px;
+        background-color:#EBEBEB ;
+    }
+    
+    .slide-wrapper {
+        width: 70%;
+        height: 75vh;
+        border: 1.3px solid red;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        margin: 0 auto;
+        position: relative;
+        top: 50px;
+        overflow: hidden; /* Prevent overflow */
+    }
+    
+    .slider {
+        margin-right: 10px;
+        height: 100%;
+        width: 10%;
+        border-radius: 60px;
+        cursor: pointer;
+        position: relative;
+        transition: transform 0.4s ease; /* Smooth transition for zoom */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+    .slider:hover {
+        transform: scale(1.05); /* Slightly smaller scale if needed */
+        z-index: 2; /* Bring hovered image to front */
+    }
+    
+    .slider.active {
+        width: 30%; /* Adjust width as needed */
+        border-radius: 50%; /* Optional: Keep the same effect */
+        animation: move-down 1.5s ease-in infinite alternate-reverse; /* Optional animation */
+        z-index: 1; /* Bring the active image to the front */
+    }
+    
+
+
+
+    /* .slider.active{
+        width: 50%;
+        border-radius: 50%;
+        animation: move-down 1.5s ease-in */ /* slow start *//* infinite*/ /* how many times to repeat *//* alternate-reverse */  /* animation backwards first and then forward*/ /* ; */
+        /* animation is the technique to change the appearence and behaviour of various elements in webpages */
+    
+    /* } */
+    /* key frames are the foundations with the help of which css animation works,they defines the display of the animations at the respective stages of its whole duration */
+
+    @keyframes move-down{
+        from{
+            transform: translateY(-15px);
+        }
+        to{
+            transform: translateY(0);
+        }
+        
+    }
+
+
+
+
+
+    .pic-1{
+        background-image: url(image-1.jpg);
+    }
+    .pic-2{
+        background-image: url(Image-2.webp);
+    }
+    .pic-3{
+        background-image: url(image-3.jpg);
+    }
+    .pic-4{
+        background-image: url(image-4.webp);
+    }
+    .pic-5{
+        background-image: url(image-5.jpg);
+    }
+
+    p{
+        text-align: center;
+        font-size: medium;
+        border-radius: 10px;
+        color: #EBEBEB;
+        background-position: center center;
+        margin: 10px;
+    }
+    header .fa-bars{
+
+        font-size: 2rem;
+        cursor:pointer;
+        color:#333;
+        display: none;
+    }
+    @media (max-width: 850px){
+        .slider.active{
+            border-radius: 20px;
+        }
+        header .fa-bars{
+            display: block;
+            z-index: 1;
+        }
+        nav{
+            position: fixed; 
+            height: 80;
+            width:70;
+             top :-100%;
+            left: 0; 
+            box-shadow: 0 1rem 2rem ;
+            color:#333;
+            font-weight: bold;
+            background-color: #fff;
+            transition: all ease-in .4s;
+            border:1px solid red;
+    }
+    nav ul{
+        width:100%;
+        position:absolute;
+        padding-left: 0;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        margin: 4rem auto;
+
+    }
+    nav ul li{
+        margin:1.5 rem auto;
+
+    }
+    nav ul li a{
+        font-size: 1rem;
+
+    }
+    .submenu{
+        position:absolute;
+        left:0;
+        width:150px;
+    }
+}
+    
